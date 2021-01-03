@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Big URL content",
+  "version": "1.0",
+  "description": "Replaces urls with their true (final) location",
+  "permissions": [
+    "https://bigurl.herokuapp.com/*",
+    "webRequest"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "page-script.js"
+      ]
+    }
+  ]
+}
